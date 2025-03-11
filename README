@@ -1,0 +1,77 @@
+# AI-based Weather App
+
+## Installation & Setup
+Prerequisites : 
+- **Node.js**
+- **MongoDB** : locally installed or use MongoDB Atlas;
+- **API keys** : already in `.env` list;
+
+**Clone Respository**
+```shell
+
+```
+
+**Backend Setup**
+```shell
+cd backend
+npm install
+```
+
+**Frontend Setup**
+```shell
+cd frontend
+npm install
+```
+
+**Run**
+```shell
+# backend first
+cd backend
+node server.js
+
+# then frontend
+cd frontend 
+npm start
+```
+## Overview
+This project is a **full-stack weather application** that allows users to search for weather infomation using `GPS coordinates`, `city names`. The app provides:
+
+- **Current Weather** : real-time data from OpenWeather API;
+
+- **Past 3 Days Weather** : Historical weather data from Open-Meteo API;
+
+- **Future 2 Days Forecast** : short-term forecast from OpenWeather API;
+
+- **User Authentication** : login, register and delete account;
+
+- **Weather Query History** : user can view, search, update, add and delete past searches;
+
+- **Data Export Functionality** : export weather query history in `.csv`, `.json` and `.pdf` formats;
+
+- **AI Insight** : travel suggestions based on weather data and location provided by `DeepSeek-v1`;
+
+## Project structure
+The application consists of two main parts:
+
+- **Backend (Node.js + Express + MongoDB)** : 
+    - handle user authentication (login / register / delete);
+    - fetches and stores weather data in `MongoDB`;
+    - provides endpoints for querying and managing weather history;
+    - uses external APIs for weather data and AI insights;
+    - supports exporting weather data in `.csv`, `.json` and `.pdf` formats;
+
+- **Frontend (React.js)** : 
+    - allows users to search weather using coordinates, city names and GPS;
+        - search by **GPS location** (automatically fetches location coordinates);
+        - search by **City name** (converts city to latitude & longitude via `OpenCage API`);
+    - displays current, past and future weather in a structured table;
+    - enables users to manage all users' history (CRUD operations);
+    - fetches AI-generated weather insights using `DeepSeek v1`;
+    - provides travel recommendations using `DeepSeek v1`;
+    - allows exporting weather data in multiple formats;
+
+## Future Improvements
+- Using `ZIP` for searching weather. But whatever used, we can convert them into coordinates;
+- Add 5-days forecast (Sorry for that, but `OpenWeather` free plan just supports two-day forecast);
+- For past three days' weather, what we used is `OpenCage API`, but this API don't contain `wind speed` and `humidity`. And they use weather code represent weather, need to find the mapping file;
+- Improved UI;
