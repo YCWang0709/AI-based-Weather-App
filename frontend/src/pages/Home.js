@@ -134,7 +134,7 @@ const Home = ({ user, setUser }) => {
             {/* main body */}
             <div style={styles.content}>
                 <h1>Weather App</h1>
-                <h4>Developed by Yucheng Wang</h4>
+                <h4>Developed by XXX</h4>
         
                 {/* coordinate query */}
                 <SearchBar setWeatherData={setWeatherData} />
