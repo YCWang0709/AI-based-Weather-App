@@ -211,14 +211,9 @@ const Home = ({ user, setUser }) => {
 
             {/* bottom section */}
             <div style={styles.footer}>
-                <p><b>About Product Manager Accelerator</b></p>
+                <p><b>xxxxxxxxxxxxxxxxx...</b></p>
                 <p>
-                    The Product Manager Accelerator Program supports PM professionals at all career stages, 
-                    from students seeking entry-level roles to Directors advancing into leadership.
-                </p>
-                <p>
-                    Our community is ambitious and committed. Participants have honed key PM and leadership 
-                    skills, building a strong foundation for future success.
+                    XXXXXXXXX...
                 </p>
             </div>
         </div>
